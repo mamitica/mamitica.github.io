@@ -355,6 +355,15 @@ main {
     gap: 15px;
 }
 
+.sidebar-author {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
 .avatar-box {
     background: var(--bg-gradient-onyx);
     border-radius: 20px;
@@ -430,6 +439,11 @@ main {
 .sidebar.active .sidebar-info_more {
     opacity: 1;
     visibility: visible;
+}
+
+.align-right{
+    text-align: right; 
+    font-size: var(--fs-8);
 }
 
 .noCapitalize {
@@ -868,20 +882,10 @@ main {
     margin-bottom: 30px;
 }
 
-#crono{
-    width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 16px;
-    margin-bottom: 30px;
-    border: 1px solid var(--light-gray-70);
-    overflow: hidden;
-   }
 
 /**
    * education and experience 
    */
-
-
 
 .timeline {
     margin-bottom: 30px;
@@ -1095,7 +1099,7 @@ main {
 .project-img {
     position: relative;
     width: 100%;
-    height: auto; /* antes era 200px */
+    height: auto;
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 15px;
@@ -1145,8 +1149,8 @@ main {
 
 .project-img img {
     width: 100%;
-    height: auto; /* antes era 100% */
-    object-fit: contain;  /* antes era cover */
+    height: auto; /* modif antes era 200px */ 
+    object-fit: contain;  /* modif antes era cover */ 
     transition: var(--transition-1);
 }
 
@@ -1464,6 +1468,12 @@ textarea.form-input::-webkit-resizer {
         max-width: 95%; 
         max-height: 95%;
     }
+
+    .sidebar-author {
+        flex-direction: row;
+
+    }
+    
 }
 
 
@@ -1549,7 +1559,8 @@ textarea.form-input::-webkit-resizer {
     }
 
     .sidebar.active {
-        max-height: 584px;
+        max-height: 1024px;
+        
     }
 
     .sidebar-info {
@@ -1746,6 +1757,15 @@ textarea.form-input::-webkit-resizer {
     /**
      * #RESUME
      */
+
+    #crono{
+        width: 100%;
+        height: auto%;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        border: 1px solid var(--light-gray-70);
+        overflow: hidden;
+    }
 
     .timeline-list {
         margin-left: 65px;
